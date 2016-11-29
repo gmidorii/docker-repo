@@ -50,7 +50,7 @@ RUN make install
 
 # pipインストール(最新版)
 RUN wget https://bootstrap.pypa.io/get-pip.py
-RUN python get-pip.py
+RUN python3 get-pip.py
 
 # virtualenvインストール
 RUN pip install virtualenv
@@ -65,5 +65,6 @@ WORKDIR /opt
 RUN git clone https://15adb179a4e8285d24d5273c2ea9c2c334c8ad29@github.com/tagasouichiro/apiclient.git
 
 WORKDIR /opt/apiclient
-RUN python manage.py migrate
-RUN python manage.py runserver 8888
+RUN python3 manage.py migrate
+
+CMD python3 /opt/apiclient/manage.py runserver 0.0.0.0:8888
