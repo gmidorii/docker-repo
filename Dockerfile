@@ -62,6 +62,7 @@ RUN pip install django
 RUN pip install django-bootstrap-form
 
 WORKDIR /opt
+ADD dummyfile /opt/
 RUN git clone https://15adb179a4e8285d24d5273c2ea9c2c334c8ad29@github.com/tagasouichiro/apiclient.git
 
 WORKDIR /opt/apiclient
