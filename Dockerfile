@@ -52,9 +52,6 @@ RUN make install
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py
 
-# virtualenvインストール
-RUN pip install virtualenv
-
 # Djangoインストール
 RUN pip install django
 
